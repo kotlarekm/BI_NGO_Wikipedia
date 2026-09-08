@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+#wyświetlenia raw
+/data/10-wyswietlenia_monthly_raw_data
