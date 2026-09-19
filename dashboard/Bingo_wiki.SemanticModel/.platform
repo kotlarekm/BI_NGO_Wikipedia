@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Bingo_wiki"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "96a38609-9fd9-4b21-b25f-dbb569f1ec09"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "a180ba7e898ddacb75c0",
+  "position": {
+    "x": 10.212765957446809,
+    "y": 0,
+    "z": 0,
+    "height": 526.68693009118545,
+    "width": 1011.063829787234,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "3-nowe_rejestracje_monthly"
+                    }
+                  },
+                  "Property": "month"
+                }
+              },
+              "queryRef": "3-nowe_rejestracje_monthly.month",
+              "nativeQueryRef": "month",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "3-nowe_rejestracje_monthly"
+                        }
+                      },
+                      "Property": "total.total"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(3-nowe_rejestracje_monthly.total.total)",
+              "nativeQueryRef": "total.total"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "3-nowe_rejestracje_monthly"
+                  }
+                },
+                "Property": "month"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8c93a6647d4089076202",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "3-nowe_rejestracje_monthly"
+                  }
+                },
+                "Property": "total.total"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c8ef54ede6c04c0a52a2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "3-nowe_rejestracje_monthly"
+              }
+            },
+            "Property": "month"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

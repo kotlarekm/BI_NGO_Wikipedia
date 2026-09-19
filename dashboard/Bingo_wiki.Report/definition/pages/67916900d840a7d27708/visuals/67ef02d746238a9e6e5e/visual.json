@@ -1,0 +1,122 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "67ef02d746238a9e6e5e",
+  "position": {
+    "x": 1300,
+    "y": 54,
+    "z": 2,
+    "height": 972,
+    "width": 568,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "top100_cat"
+                    }
+                  },
+                  "Property": "assigned_category"
+                }
+              },
+              "queryRef": "top100_cat.assigned_category",
+              "nativeQueryRef": "Liczba elementów assigned_category",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "top100_cat"
+                        }
+                      },
+                      "Property": "views"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(top100_cat.views)",
+              "nativeQueryRef": "views"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "top100_cat"
+                      }
+                    },
+                    "Property": "views"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a2c3c0727200d00dba8d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "top100_cat"
+              }
+            },
+            "Property": "assigned_category"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b8285ee19d0eb5a9e704",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "top100_cat"
+                  }
+                },
+                "Property": "views"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

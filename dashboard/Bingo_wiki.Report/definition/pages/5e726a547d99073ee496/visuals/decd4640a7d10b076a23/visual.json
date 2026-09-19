@@ -1,0 +1,172 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "decd4640a7d10b076a23",
+  "position": {
+    "x": 461.03343465045594,
+    "y": 341.39817629179333,
+    "z": 0,
+    "height": 622.97872340425533,
+    "width": 1386.0182370820669,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Źródła danych:",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "20pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "-",
+                    "textStyle": {
+                      "fontFamily": "Consolas, Courier New, monospace",
+                      "fontSize": "18pt",
+                      "color": "#0451a5"
+                    }
+                  },
+                  {
+                    "value": " Wikimedia Foundation, ",
+                    "textStyle": {
+                      "fontFamily": "Consolas, Courier New, monospace",
+                      "fontSize": "18pt",
+                      "color": "#3b3b3b"
+                    }
+                  },
+                  {
+                    "value": "*Pageview complete dumps*",
+                    "textStyle": {
+                      "fontFamily": "Consolas, Courier New, monospace",
+                      "fontStyle": "italic",
+                      "fontSize": "18pt",
+                      "color": "#800080"
+                    }
+                  },
+                  {
+                    "value": ", dumps.wikimedia.org, dane pobrane w lipcu 2026 (CC0 1.0).",
+                    "textStyle": {
+                      "fontFamily": "Consolas, Courier New, monospace",
+                      "fontSize": "18pt",
+                      "color": "#3b3b3b"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "-",
+                    "textStyle": {
+                      "fontFamily": "Consolas, Courier New, monospace",
+                      "fontSize": "18pt",
+                      "color": "#0451a5"
+                    }
+                  },
+                  {
+                    "value": " Wikidata contributors, ",
+                    "textStyle": {
+                      "fontFamily": "Consolas, Courier New, monospace",
+                      "fontSize": "18pt",
+                      "color": "#3b3b3b"
+                    }
+                  },
+                  {
+                    "value": "*Wikidata*",
+                    "textStyle": {
+                      "fontFamily": "Consolas, Courier New, monospace",
+                      "fontStyle": "italic",
+                      "fontSize": "18pt",
+                      "color": "#800080"
+                    }
+                  },
+                  {
+                    "value": ", zapytanie SPARQL wykonane w lipcu 2026 (CC0 1.0).",
+                    "textStyle": {
+                      "fontFamily": "Consolas, Courier New, monospace",
+                      "fontSize": "18pt",
+                      "color": "#3b3b3b"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "-",
+                    "textStyle": {
+                      "fontFamily": "Consolas, Courier New, monospace",
+                      "fontSize": "18pt",
+                      "color": "#0451a5"
+                    }
+                  },
+                  {
+                    "value": " Wikipedia contributors, ",
+                    "textStyle": {
+                      "fontFamily": "Consolas, Courier New, monospace",
+                      "fontSize": "18pt",
+                      "color": "#3b3b3b"
+                    }
+                  },
+                  {
+                    "value": "*Wikipedia, wolna encyklopedia*",
+                    "textStyle": {
+                      "fontFamily": "Consolas, Courier New, monospace",
+                      "fontStyle": "italic",
+                      "fontSize": "18pt",
+                      "color": "#800080"
+                    }
+                  },
+                  {
+                    "value": " (wersja polskojęzyczna), dane pobrane w lipcu 2026 (CC BY-SA 4.0).",
+                    "textStyle": {
+                      "fontFamily": "Consolas, Courier New, monospace",
+                      "fontSize": "18pt",
+                      "color": "#3b3b3b"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Dane pobrane z: https://github.com/bi-ngo-wolontariat/BI_NGO-2026-Wikimedia-Polska/tree/main ",
+                    "textStyle": {
+                      "fontSize": "18pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,21 @@
+relationship bd096616-1f08-4b57-be65-ad37f7bda14f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dim_month.month
+	toColumn: LocalDateTable_a9271a7e-2cb6-4f15-9cec-e27c487be376.Date
+
+relationship b6a4a926-37d6-0a78-0632-7ddc06cdd186
+	fromColumn: 1-ogladalnosc_monthly.month
+	toColumn: Dim_month.month
+
+relationship 2f9f1c14-7b51-1656-5727-8fe3b780ad69
+	fromColumn: 2-nowe_artykuly_monthly.month
+	toColumn: Dim_month.month
+
+relationship e75be5be-f845-7620-333f-e5c36021e192
+	fromColumn: 3-nowe_rejestracje_monthly.month
+	toColumn: Dim_month.month
+
+relationship 392436b1-493b-1230-9ca4-d8c701c8b22e
+	fromColumn: 4-aktywni_edytorzy_monthly.month
+	toColumn: Dim_month.month
+

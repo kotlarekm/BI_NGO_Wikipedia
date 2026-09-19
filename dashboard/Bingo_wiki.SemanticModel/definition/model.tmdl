@@ -1,0 +1,28 @@
+model Model
+	culture: pl-PL
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pl-PL
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["1-ogladalnosc_monthly","2-nowe_artykuly_monthly","3-nowe_rejestracje_monthly","Dim_month","4-aktywni_edytorzy_monthly","5-top_1000_artykulow_monthly","7-top_100_najczesciej_edytowanych_artykulow_monthly","top100_cat"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 1-ogladalnosc_monthly
+ref table DateTableTemplate_5a746961-8fd3-44dd-b7a6-b488a3214107
+ref table 2-nowe_artykuly_monthly
+ref table 3-nowe_rejestracje_monthly
+ref table Dim_month
+ref table LocalDateTable_a9271a7e-2cb6-4f15-9cec-e27c487be376
+ref table 4-aktywni_edytorzy_monthly
+ref table 5-top_1000_artykulow_monthly
+ref table 7-top_100_najczesciej_edytowanych_artykulow_monthly
+ref table top100_cat
+
+ref cultureInfo pl-PL
+

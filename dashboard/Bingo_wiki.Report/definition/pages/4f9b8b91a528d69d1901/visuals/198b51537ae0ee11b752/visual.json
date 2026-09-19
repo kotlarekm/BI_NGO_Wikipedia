@@ -1,0 +1,172 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "198b51537ae0ee11b752",
+  "position": {
+    "x": 910.39513677811544,
+    "y": 587.96352583586622,
+    "z": 3,
+    "height": 447.90273556231,
+    "width": 707.59878419452889,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2-nowe_artykuly_monthly"
+                    }
+                  },
+                  "Property": "month"
+                }
+              },
+              "queryRef": "2-nowe_artykuly_monthly.month.Odmiana.Hierarchia dat.Rok",
+              "nativeQueryRef": "month Rok",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "2-nowe_artykuly_monthly"
+                        }
+                      },
+                      "Property": "total.content"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(2-nowe_artykuly_monthly.total.content)",
+              "nativeQueryRef": "Suma elementów total.content"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Suma nowych artykułów'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "75178e2cd0530895909d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2-nowe_artykuly_monthly"
+              }
+            },
+            "Property": "month"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d0caf0c3251c8bbb91da",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2-nowe_artykuly_monthly"
+              }
+            },
+            "Property": "month"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "c4eba7b1e8a7b31a5003",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2-nowe_artykuly_monthly"
+              }
+            },
+            "Property": "month"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "fe5db9906dcb0bd23b47",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2-nowe_artykuly_monthly"
+              }
+            },
+            "Property": "month"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      },
+      {
+        "name": "ce96c3d43ceb07c53775",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "2-nowe_artykuly_monthly"
+                  }
+                },
+                "Property": "total.content"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

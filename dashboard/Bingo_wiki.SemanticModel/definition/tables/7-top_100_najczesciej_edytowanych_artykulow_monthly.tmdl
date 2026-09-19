@@ -1,0 +1,66 @@
+table 7-top_100_najczesciej_edytowanych_artykulow_monthly
+	lineageTag: b353ef60-09e0-48a1-a97c-b0d0b3bdb919
+
+	column page_id
+		dataType: int64
+		formatString: 0
+		lineageTag: db8db457-8185-4115-ad29-9a85f5ae43c4
+		summarizeBy: sum
+		sourceColumn: page_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 21bdc725-bb34-4cca-8dfa-f93d12de0ba0
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: int64
+		formatString: 0
+		lineageTag: f8770c50-7d6f-4897-95b4-674f1e832129
+		summarizeBy: sum
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column rank
+		dataType: int64
+		formatString: 0
+		lineageTag: ad452534-8d94-44bd-b61c-c60fc7ab04ac
+		summarizeBy: sum
+		sourceColumn: rank
+
+		annotation SummarizationSetBy = Automatic
+
+	column title
+		dataType: string
+		lineageTag: 476816eb-e4f2-4c23-86ca-37bc05425a24
+		summarizeBy: none
+		sourceColumn: title
+
+		annotation SummarizationSetBy = Automatic
+
+	column edits
+		dataType: int64
+		formatString: 0
+		lineageTag: f9bd35e1-cdf6-4337-ab18-cb95bae67a85
+		summarizeBy: sum
+		sourceColumn: edits
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 7-top_100_najczesciej_edytowanych_artykulow_monthly = m
+		mode: import
+		source =
+				let
+				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\7-top_100_najczesciej_edytowanych_artykulow_monthly.csv"), [Delimiter = ",", Columns = 6, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+				  #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(Źródło, [PromoteAllScalars = true]),
+				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie", {{"page_id", Int64.Type}, {"year", Int64.Type}, {"month", Int64.Type}, {"rank", Int64.Type}, {"title", type text}, {"edits", Int64.Type}}, "pl")
+				in
+				  #"Zmieniono typ kolumny"
+

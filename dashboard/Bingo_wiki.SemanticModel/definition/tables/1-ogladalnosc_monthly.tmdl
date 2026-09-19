@@ -1,0 +1,59 @@
+table 1-ogladalnosc_monthly
+	lineageTag: adbacffc-6cf6-4a69-bad4-d50bf764e58b
+
+	column month
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 52eb77a1-d37a-49c9-92f0-31d88c5ccef1
+		summarizeBy: none
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column agent
+		dataType: string
+		lineageTag: fac4b7a5-a440-4f1f-9e05-a06961e0f21b
+		summarizeBy: none
+		sourceColumn: agent
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'total.mobile-app'
+		dataType: int64
+		formatString: 0
+		lineageTag: c8d7ddc2-2181-482f-8efc-7b69ae9afc2f
+		summarizeBy: sum
+		sourceColumn: total.mobile-app
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'total.desktop'
+		dataType: int64
+		formatString: 0
+		lineageTag: 96a567df-9439-494c-a382-07d0c41f53df
+		summarizeBy: sum
+		sourceColumn: total.desktop
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'total.mobile-web'
+		dataType: int64
+		formatString: 0
+		lineageTag: b0957c4f-c431-4c0d-806f-f661efe6cc4e
+		summarizeBy: sum
+		sourceColumn: total.mobile-web
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 1-ogladalnosc_monthly = m
+		mode: import
+		source =
+				let
+				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\1-ogladalnosc_monthly.csv"), [Delimiter = ",", Columns = 5, QuoteStyle = QuoteStyle.None]),
+				  #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(Źródło, [PromoteAllScalars = true]),
+				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie", {{"month", type datetime}, {"agent", type text}, {"total.mobile-app", Int64.Type}, {"total.desktop", Int64.Type}, {"total.mobile-web", Int64.Type}}, "pl")
+				in
+				  #"Zmieniono typ kolumny"
+
+	annotation PBI_ResultType = Table
+

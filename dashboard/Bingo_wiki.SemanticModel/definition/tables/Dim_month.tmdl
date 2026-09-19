@@ -1,0 +1,33 @@
+table Dim_month
+	lineageTag: 53d377ab-e9c1-4797-9e50-9c9aea90c777
+
+	column month
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8a25975e-96b5-428b-86aa-28c86227d812
+		summarizeBy: none
+		sourceColumn: month
+
+		variation Odmiana
+			isDefault
+			relationship: bd096616-1f08-4b57-be65-ad37f7bda14f
+			defaultHierarchy: LocalDateTable_a9271a7e-2cb6-4f15-9cec-e27c487be376.'Hierarchia dat'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_month = m
+		mode: import
+		source =
+				let
+				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\2-nowe_artykuly_monthly.csv"), [Delimiter = ",", Columns = 2, QuoteStyle = QuoteStyle.None]),
+				  #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(Źródło, [PromoteAllScalars = true]),
+				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie", {{"month", type datetime}, {"total.content", Int64.Type}}, "pl"),
+				    #"Usunięto kolumny" = Table.RemoveColumns(#"Zmieniono typ kolumny",{"total.content"}),
+				    #"Usunięto duplikaty" = Table.Distinct(#"Usunięto kolumny")
+				in
+				  #"Usunięto duplikaty"
+
+	annotation PBI_NavigationStepName = Nawigacja
+
+	annotation PBI_ResultType = Table
+

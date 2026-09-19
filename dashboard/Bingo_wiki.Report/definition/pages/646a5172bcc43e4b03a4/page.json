@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "646a5172bcc43e4b03a4",
+  "displayName": "Strona 2",
+  "displayOption": "FitToPage",
+  "height": 1080,
+  "width": 1920,
+  "pageBinding": {
+    "name": "8617afec69177eb8de82",
+    "type": "Default",
+    "parameters": [],
+    "referenceScope": "CrossReport"
+  }
+}

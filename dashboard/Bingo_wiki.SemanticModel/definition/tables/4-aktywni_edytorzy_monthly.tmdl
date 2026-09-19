@@ -1,0 +1,31 @@
+table 4-aktywni_edytorzy_monthly
+	lineageTag: bcc7619c-1e61-47bb-8cb3-4755695355f5
+
+	column month
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ed839237-7e50-44c5-98d5-3d8b1b1d7adf
+		summarizeBy: none
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'total.total'
+		dataType: int64
+		formatString: 0
+		lineageTag: 8e25a8b2-e79d-4966-acd0-9b645b41d3ec
+		summarizeBy: sum
+		sourceColumn: total.total
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 4-aktywni_edytorzy_monthly = m
+		mode: import
+		source =
+				let
+				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\4-aktywni_edytorzy_monthly.csv"), [Delimiter = ",", Columns = 2, QuoteStyle = QuoteStyle.None]),
+				  #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(Źródło, [PromoteAllScalars = true]),
+				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie", {{"month", type datetime}, {"total.total", Int64.Type}}, "pl")
+				in
+				  #"Zmieniono typ kolumny"
+

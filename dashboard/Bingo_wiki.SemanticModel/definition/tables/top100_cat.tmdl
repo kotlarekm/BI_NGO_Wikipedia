@@ -1,0 +1,38 @@
+table top100_cat
+	lineageTag: 96881734-7b91-4f6d-a3ae-2d4dd4bc9a19
+
+	column title
+		dataType: string
+		lineageTag: 89b5a3dd-314b-4ba8-bc74-1b6d635135cb
+		summarizeBy: none
+		sourceColumn: title
+
+		annotation SummarizationSetBy = Automatic
+
+	column views
+		dataType: int64
+		formatString: 0
+		lineageTag: 0071fe36-f7f7-4be1-9567-6a503afee885
+		summarizeBy: sum
+		sourceColumn: views
+
+		annotation SummarizationSetBy = Automatic
+
+	column assigned_category
+		dataType: string
+		lineageTag: c048fb2c-0bd9-49f1-b3fc-7468f0881d21
+		summarizeBy: none
+		sourceColumn: assigned_category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition top100_cat = m
+		mode: import
+		source =
+				let
+				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\top100_cat.csv"), [Delimiter = ",", Columns = 3, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+				  #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(Źródło, [PromoteAllScalars = true]),
+				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie", {{"title", type text}, {"views", Int64.Type}, {"assigned_category", type text}}, "pl")
+				in
+				  #"Zmieniono typ kolumny"
+

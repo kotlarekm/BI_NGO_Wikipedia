@@ -1,0 +1,173 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "942f4a944c8540363c37",
+  "position": {
+    "x": 0,
+    "y": 59.817629179331306,
+    "z": 0,
+    "height": 528.145896656535,
+    "width": 873.92097264437689,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "1-ogladalnosc_monthly"
+                    }
+                  },
+                  "Property": "month"
+                }
+              },
+              "queryRef": "1-ogladalnosc_monthly.month.Odmiana.Hierarchia dat.Rok",
+              "nativeQueryRef": "month Rok",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "1-ogladalnosc_monthly"
+                    }
+                  },
+                  "Property": "agent"
+                }
+              },
+              "queryRef": "1-ogladalnosc_monthly.agent",
+              "nativeQueryRef": "agent"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "1-ogladalnosc_monthly"
+                        }
+                      },
+                      "Property": "total.mobile-app"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(1-ogladalnosc_monthly.total.mobile-app)",
+              "nativeQueryRef": "Suma elementów total.mobile-app"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b30e3721412d8c085670",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "1-ogladalnosc_monthly"
+              }
+            },
+            "Property": "month"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e3ca542b097a3333c040",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "1-ogladalnosc_monthly"
+              }
+            },
+            "Property": "month"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "da59aadbc0bc00d92b8d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "1-ogladalnosc_monthly"
+              }
+            },
+            "Property": "month"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "524e3afb459c0010aa0a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "1-ogladalnosc_monthly"
+              }
+            },
+            "Property": "month"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ac25588093a514156e07",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "1-ogladalnosc_monthly"
+              }
+            },
+            "Property": "agent"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bdae5c96086d4ea98b7a",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "1-ogladalnosc_monthly"
+                  }
+                },
+                "Property": "total.mobile-app"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

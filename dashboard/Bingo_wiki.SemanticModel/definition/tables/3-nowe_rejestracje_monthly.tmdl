@@ -1,0 +1,31 @@
+table 3-nowe_rejestracje_monthly
+	lineageTag: c4d42ae3-a39c-44f8-9a58-e2e266aacd7d
+
+	column month
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7dbb2bad-492b-41a7-bdd5-bb6b167da635
+		summarizeBy: none
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'total.total'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d592767-017a-461b-afba-73e66c367e14
+		summarizeBy: sum
+		sourceColumn: total.total
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 3-nowe_rejestracje_monthly = m
+		mode: import
+		source =
+				let
+				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\3-nowe_rejestracje_monthly.csv"), [Delimiter = ",", Columns = 2, QuoteStyle = QuoteStyle.None]),
+				  #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(Źródło, [PromoteAllScalars = true]),
+				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie", {{"month", type datetime}, {"total.total", Int64.Type}}, "pl")
+				in
+				  #"Zmieniono typ kolumny"
+

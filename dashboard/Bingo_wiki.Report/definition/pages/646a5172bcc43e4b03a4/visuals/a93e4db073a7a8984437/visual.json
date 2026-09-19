@@ -1,0 +1,144 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "a93e4db073a7a8984437",
+  "position": {
+    "x": 10,
+    "y": 537,
+    "z": 2,
+    "height": 527,
+    "width": 1011,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "4-aktywni_edytorzy_monthly"
+                    }
+                  },
+                  "Property": "month"
+                }
+              },
+              "queryRef": "4-aktywni_edytorzy_monthly.month.Odmiana.Hierarchia dat.Rok",
+              "nativeQueryRef": "month Rok",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "4-aktywni_edytorzy_monthly"
+                        }
+                      },
+                      "Property": "total.total"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(4-aktywni_edytorzy_monthly.total.total)",
+              "nativeQueryRef": "Suma elementów total.total"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bd6bcf4e01b85a641678",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "4-aktywni_edytorzy_monthly"
+                  }
+                },
+                "Property": "total.total"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "799af9e8a00a14bcba06",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "4-aktywni_edytorzy_monthly"
+              }
+            },
+            "Property": "month"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3f59d54a4ab4bbe01ada",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "4-aktywni_edytorzy_monthly"
+              }
+            },
+            "Property": "month"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "4da8ae44c00ae1792577",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "4-aktywni_edytorzy_monthly"
+              }
+            },
+            "Property": "month"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "fdcdcfa10d8133a0c00e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "4-aktywni_edytorzy_monthly"
+              }
+            },
+            "Property": "month"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      }
+    ]
+  }
+}

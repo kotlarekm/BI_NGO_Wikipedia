@@ -1,0 +1,209 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "64c223d60034708b856e",
+  "position": {
+    "x": 675.13090671535531,
+    "y": 53.516474312802558,
+    "z": 1,
+    "height": 971.52984137087719,
+    "width": 568.09795808975025,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "7-top_100_najczesciej_edytowanych_artykulow_monthly"
+                    }
+                  },
+                  "Property": "title"
+                }
+              },
+              "queryRef": "7-top_100_najczesciej_edytowanych_artykulow_monthly.title",
+              "nativeQueryRef": "title",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "7-top_100_najczesciej_edytowanych_artykulow_monthly"
+                        }
+                      },
+                      "Property": "edits"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(7-top_100_najczesciej_edytowanych_artykulow_monthly.edits)",
+              "nativeQueryRef": "Suma elementów edits"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "7-top_100_najczesciej_edytowanych_artykulow_monthly"
+                      }
+                    },
+                    "Property": "edits"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ad0c30cc4b0511b05140",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "7-top_100_najczesciej_edytowanych_artykulow_monthly"
+              }
+            },
+            "Property": "title"
+          }
+        },
+        "type": "TopN",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "7",
+              "Entity": "7-top_100_najczesciej_edytowanych_artykulow_monthly",
+              "Type": 0
+            },
+            {
+              "Name": "subquery",
+              "Expression": {
+                "Subquery": {
+                  "Query": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "7",
+                        "Entity": "7-top_100_najczesciej_edytowanych_artykulow_monthly",
+                        "Type": 0
+                      }
+                    ],
+                    "Select": [
+                      {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "7"
+                            }
+                          },
+                          "Property": "title"
+                        },
+                        "Name": "field"
+                      }
+                    ],
+                    "OrderBy": [
+                      {
+                        "Direction": 2,
+                        "Expression": {
+                          "Aggregation": {
+                            "Expression": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "7"
+                                  }
+                                },
+                                "Property": "edits"
+                              }
+                            },
+                            "Function": 0
+                          }
+                        }
+                      }
+                    ],
+                    "Top": 50
+                  }
+                }
+              },
+              "Type": 2
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "7"
+                          }
+                        },
+                        "Property": "title"
+                      }
+                    }
+                  ],
+                  "Table": {
+                    "SourceRef": {
+                      "Source": "subquery"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "184c7fa22e1ae2858c9a",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "7-top_100_najczesciej_edytowanych_artykulow_monthly"
+                  }
+                },
+                "Property": "edits"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

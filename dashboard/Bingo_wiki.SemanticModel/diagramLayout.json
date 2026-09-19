@@ -1,0 +1,126 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 1079.199951171875,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "1-ogladalnosc_monthly",
+          "nodeLineageTag": "adbacffc-6cf6-4a69-bad4-d50bf764e58b",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 284,
+            "y": 36
+          },
+          "nodeIndex": "2-nowe_artykuly_monthly",
+          "nodeLineageTag": "98a57663-89ae-4bc3-81d8-c83d3da670ac",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 568,
+            "y": 36
+          },
+          "nodeIndex": "3-nowe_rejestracje_monthly",
+          "nodeLineageTag": "c4d42ae3-a39c-44f8-9a58-e2e266aacd7d",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 334,
+            "y": 274
+          },
+          "nodeIndex": "Dim_month",
+          "nodeLineageTag": "53d377ab-e9c1-4797-9e50-9c9aea90c777",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 863,
+            "y": 41
+          },
+          "nodeIndex": "4-aktywni_edytorzy_monthly",
+          "nodeLineageTag": "bcc7619c-1e61-47bb-8cb3-4755695355f5",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1183,
+            "y": 21
+          },
+          "nodeIndex": "5-top_1000_artykulow_monthly",
+          "nodeLineageTag": "b391ff41-e1a1-4dde-8bac-705cac912e3d",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1463,
+            "y": 26
+          },
+          "nodeIndex": "7-top_100_najczesciej_edytowanych_artykulow_monthly",
+          "nodeLineageTag": "b353ef60-09e0-48a1-a97c-b0d0b3bdb919",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1747,
+            "y": 113
+          },
+          "nodeIndex": "top100_cat",
+          "nodeLineageTag": "96881734-7b91-4f6d-a3ae-2d4dd4bc9a19",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Wszystkie tabele",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Wszystkie tabele",
+  "defaultDiagram": "Wszystkie tabele"
+}
