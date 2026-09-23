@@ -1,0 +1,81 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "35f1901001980a993b01",
+  "position": {
+    "x": 804.679802955665,
+    "y": 699.60591133004925,
+    "z": 3000,
+    "height": 293.94088669950736,
+    "width": 309.90147783251228,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "4-aktywni_edytorzy_monthly"
+                        }
+                      },
+                      "Property": "total.total"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(4-aktywni_edytorzy_monthly.total.total)",
+              "nativeQueryRef": "Średnia elementów total.total"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "4-aktywni_edytorzy_monthly"
+                      }
+                    },
+                    "Property": "total.total"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Miesięczna średnia aktywnych edytorów'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

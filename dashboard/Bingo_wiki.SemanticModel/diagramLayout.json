@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 1079.199951171875,
+        "x": 0,
         "y": 0
       },
       "nodes": [
@@ -19,7 +19,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
@@ -32,7 +32,7 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 2
         },
         {
           "location": {
@@ -45,7 +45,7 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 3
         },
         {
           "location": {
@@ -58,7 +58,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 4
         },
         {
           "location": {
@@ -71,12 +71,12 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 5
         },
         {
           "location": {
-            "x": 1183,
-            "y": 21
+            "x": 1228,
+            "y": 13
           },
           "nodeIndex": "5-top_1000_artykulow_monthly",
           "nodeLineageTag": "b391ff41-e1a1-4dde-8bac-705cac912e3d",
@@ -84,12 +84,12 @@
             "height": 224,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 6
         },
         {
           "location": {
-            "x": 1463,
-            "y": 26
+            "x": 1208,
+            "y": 327
           },
           "nodeIndex": "7-top_100_najczesciej_edytowanych_artykulow_monthly",
           "nodeLineageTag": "b353ef60-09e0-48a1-a97c-b0d0b3bdb919",
@@ -97,17 +97,41 @@
             "height": 224,
             "width": 234
           },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 2031,
+            "y": 89
+          },
+          "nodeIndex": "Tab_measures",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1706,
+            "y": 17
+          },
+          "nodeIndex": "kategorie",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
           "zIndex": 0
         },
         {
           "location": {
-            "x": 1747,
-            "y": 113
+            "x": 2315,
+            "y": 187.5
           },
-          "nodeIndex": "top100_cat",
-          "nodeLineageTag": "96881734-7b91-4f6d-a3ae-2d4dd4bc9a19",
+          "nodeIndex": "top100_z_kategoriami",
+          "nodeLineageTag": "acfafad6-d4f7-4920-8e6e-e1d902fc13a7",
           "size": {
-            "height": 152,
+            "height": 176,
             "width": 234
           },
           "zIndex": 0

@@ -1,0 +1,8 @@
+expression StartingYear = 2018 meta [IsParameterQuery=true, Type="Number", IsParameterQueryRequired=true]
+	lineageTag: ed5950a0-525a-44e9-bf48-719a4a96f5a3
+	queryGroup: Parametry
+
+	annotation PBI_NavigationStepName = Nawigacja
+
+	annotation PBI_ResultType = Number
+

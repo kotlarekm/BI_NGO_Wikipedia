@@ -4,10 +4,10 @@
   "position": {
     "x": 1072.3404255319149,
     "y": 36.474164133738604,
-    "z": 1,
+    "z": 1000,
     "height": 227.59878419452886,
     "width": 354.52887537993922,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -62,28 +62,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "3e9e495c1c5014e9e0a9",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "3-nowe_rejestracje_monthly"
-                  }
-                },
-                "Property": "total.total"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

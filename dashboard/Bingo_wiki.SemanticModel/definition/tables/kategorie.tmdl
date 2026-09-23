@@ -1,4 +1,4 @@
-table top100_cat
+table kategorie
 	lineageTag: 96881734-7b91-4f6d-a3ae-2d4dd4bc9a19
 
 	column title
@@ -26,8 +26,9 @@ table top100_cat
 
 		annotation SummarizationSetBy = Automatic
 
-	partition top100_cat = m
+	partition kategorie = m
 		mode: import
+		queryGroup: Zapytania
 		source =
 				let
 				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\top100_cat.csv"), [Delimiter = ",", Columns = 3, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
@@ -35,4 +36,6 @@ table top100_cat
 				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie", {{"title", type text}, {"views", Int64.Type}, {"assigned_category", type text}}, "pl")
 				in
 				  #"Zmieniono typ kolumny"
+
+	annotation PBI_ResultType = Table
 

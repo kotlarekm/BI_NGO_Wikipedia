@@ -1,0 +1,104 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "d153ce4534ec04596a4d",
+  "position": {
+    "x": 1015,
+    "y": 320,
+    "z": 1000,
+    "height": 586.66666666666674,
+    "width": 630,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "2-nowe_artykuly_monthly"
+                        }
+                      },
+                      "Property": "total.content"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(2-nowe_artykuly_monthly.total.content)",
+              "nativeQueryRef": "Suma elementów total.content"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "2-nowe_artykuly_monthly"
+                      }
+                    },
+                    "Property": "total.content"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Suma stworzonych artykułów z ostatnich 25 lat'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "07c177f0d5eace7b6917",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "2-nowe_artykuly_monthly"
+                  }
+                },
+                "Property": "total.content"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

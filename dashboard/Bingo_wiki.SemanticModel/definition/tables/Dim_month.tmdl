@@ -17,6 +17,7 @@ table Dim_month
 
 	partition Dim_month = m
 		mode: import
+		queryGroup: Zapytania
 		source =
 				let
 				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\2-nowe_artykuly_monthly.csv"), [Delimiter = ",", Columns = 2, QuoteStyle = QuoteStyle.None]),

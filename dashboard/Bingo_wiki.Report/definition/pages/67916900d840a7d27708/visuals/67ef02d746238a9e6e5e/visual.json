@@ -4,10 +4,10 @@
   "position": {
     "x": 1300,
     "y": 54,
-    "z": 2,
+    "z": 2000,
     "height": 972,
     "width": 568,
-    "tabOrder": 2
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "barChart",
@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "top100_cat"
+                      "Entity": "kategorie"
                     }
                   },
                   "Property": "assigned_category"
@@ -41,7 +41,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "top100_cat"
+                          "Entity": "kategorie"
                         }
                       },
                       "Property": "views"
@@ -65,7 +65,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "top100_cat"
+                        "Entity": "kategorie"
                       }
                     },
                     "Property": "views"
@@ -81,42 +81,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "a2c3c0727200d00dba8d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "top100_cat"
-              }
-            },
-            "Property": "assigned_category"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "b8285ee19d0eb5a9e704",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "top100_cat"
-                  }
-                },
-                "Property": "views"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

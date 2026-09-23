@@ -4,10 +4,10 @@
   "position": {
     "x": 675.13090671535531,
     "y": 53.516474312802558,
-    "z": 1,
+    "z": 1000,
     "height": 971.52984137087719,
     "width": 568.09795808975025,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "barChart",
@@ -184,25 +184,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "184c7fa22e1ae2858c9a",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "7-top_100_najczesciej_edytowanych_artykulow_monthly"
-                  }
-                },
-                "Property": "edits"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

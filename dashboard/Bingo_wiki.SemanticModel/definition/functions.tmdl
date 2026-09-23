@@ -1,0 +1,28 @@
+function applyFont = ```
+		(tex: string, font: string, fontName:string, alignment:string) =>
+		  VAR __Result =
+		      "data&colon;image/svg+xml;utf8,
+		      <svg xmlns='http://www.w3.org/2000/svg' width='200' height='30'>
+		      <style>
+		      -face {
+		       font-family:'"&fontName&"';
+		       src: url('data:font/woff2;base64,"
+		        & font &
+		        "') format('woff2');
+		      }
+		      text {
+		       font-family: '"&fontName&"';
+		       font-size: 14px;
+		       fill: black;
+		       text-anchor: "&alignment&";
+		      }
+		      </style>
+		      <text x='50%' y='50%' dominant-baseline='middle'>"
+		        & tex &
+		        "</text>
+		      </svg>"
+		   RETURN 
+		    __Result
+		```
+	lineageTag: 6aa1e02a-e6cb-4284-bd99-deaf2329e8e1
+

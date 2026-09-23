@@ -1,0 +1,60 @@
+table top100_z_kategoriami
+	lineageTag: acfafad6-d4f7-4920-8e6e-e1d902fc13a7
+
+	column page_id
+		dataType: int64
+		formatString: 0
+		lineageTag: cf3ae39e-5395-4a05-afd0-fe1f4093589e
+		summarizeBy: sum
+		sourceColumn: page_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column title
+		dataType: string
+		lineageTag: a66107f8-abe8-47b9-80b6-9192e3d9cf8a
+		summarizeBy: none
+		sourceColumn: title
+
+		annotation SummarizationSetBy = Automatic
+
+	column views_total
+		dataType: double
+		lineageTag: e053e088-5976-4572-aea7-e0ad83abd9d4
+		summarizeBy: sum
+		sourceColumn: views_total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column category
+		dataType: string
+		lineageTag: 41e2ae35-a6bf-49f3-b9bf-85a3efe9b337
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition top100_z_kategoriami = m
+		mode: import
+		queryGroup: Zapytania
+		source =
+				let
+				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\5-top_1000_artykulow_monthly.csv"), [Delimiter = ",", Columns = 6, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+				  #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(Źródło, [PromoteAllScalars = true]),
+				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie", {{"page_id", Int64.Type}, {"year", Int64.Type}, {"month", Int64.Type}, {"rank", Int64.Type}, {"title", type text}, {"views", Int64.Type}}, "pl"),
+				    #"Przefiltrowano wiersze1" = Table.SelectRows(#"Zmieniono typ kolumny", each ([year] >= StartingYear)),
+				    #"Pogrupowano wiersze" = Table.Group(#"Przefiltrowano wiersze1", {"page_id", "title"}, {{"views_total", each List.Sum([views]), type nullable number}}),
+				    #"Posortowano wiersze" = Table.Sort(#"Pogrupowano wiersze",{{"views_total", Order.Descending}}),
+				    #"Przefiltrowano wiersze" = Table.SelectRows(#"Posortowano wiersze", each [views_total] > 4170000),
+				    #"Scalone zapytania" = Table.NestedJoin(#"Przefiltrowano wiersze", {"title"}, kategorie, {"title"}, "top100_cat", JoinKind.LeftOuter),
+				    #"Rozwinięty element top100_cat" = Table.ExpandTableColumn(#"Scalone zapytania", "top100_cat", {"assigned_category"}, {"top100_cat.assigned_category"}),
+				    #"Zmieniono nazwy kolumn" = Table.RenameColumns(#"Rozwinięty element top100_cat",{{"top100_cat.assigned_category", "category"}})
+				in
+				    #"Zmieniono nazwy kolumn"
+
+	annotation PBI_NavigationStepName = Nawigacja
+
+	annotation PBI_ResultType = Table
+

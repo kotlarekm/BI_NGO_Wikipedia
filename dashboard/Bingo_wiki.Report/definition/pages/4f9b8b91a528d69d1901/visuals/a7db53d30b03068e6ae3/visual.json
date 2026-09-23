@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "a7db53d30b03068e6ae3",
   "position": {
-    "x": 1038.7841945288753,
-    "y": 59.817629179331306,
-    "z": 1,
+    "x": 960,
+    "y": 58.333333333333336,
+    "z": 1000,
     "height": 528.145896656535,
     "width": 854.95440729483278,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "lineChart",
@@ -75,26 +75,27 @@
         }
       }
     },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Miesięczna oglądalność'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "50388042c89bacb72d99",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "1-ogladalnosc_monthly"
-              }
-            },
-            "Property": "month"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "28e2f7109ce1861541c1",
+        "name": "4a6a724d89917a1424b3",
         "field": {
           "Column": {
             "Expression": {
@@ -108,35 +109,7 @@
         "type": "Categorical"
       },
       {
-        "name": "9b57a189513d50cd1399",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "1-ogladalnosc_monthly"
-              }
-            },
-            "Property": "month"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "e629922030962577b026",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "1-ogladalnosc_monthly"
-              }
-            },
-            "Property": "month"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "54db011fc125c304e045",
+        "name": "f7e72b43174488024ed8",
         "field": {
           "Column": {
             "Expression": {
@@ -150,7 +123,7 @@
         "type": "Categorical"
       },
       {
-        "name": "357c957c916174d06090",
+        "name": "d53615f9de823036e48d",
         "field": {
           "Aggregation": {
             "Expression": {

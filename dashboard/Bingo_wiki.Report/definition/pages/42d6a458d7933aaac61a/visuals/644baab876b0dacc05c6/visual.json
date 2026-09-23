@@ -1,0 +1,104 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "644baab876b0dacc05c6",
+  "position": {
+    "x": 1161.1330049261082,
+    "y": 303.25123152709358,
+    "z": 2000,
+    "height": 293.94088669950736,
+    "width": 309.90147783251228,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "3-nowe_rejestracje_monthly"
+                        }
+                      },
+                      "Property": "total.total"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(3-nowe_rejestracje_monthly.total.total)",
+              "nativeQueryRef": "Suma elementów total.total"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "3-nowe_rejestracje_monthly"
+                      }
+                    },
+                    "Property": "total.total"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Suma nowych zarejestrowanych użytkowników z ostatnich 25 lat'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "954d515abba5cddb309b",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "3-nowe_rejestracje_monthly"
+                  }
+                },
+                "Property": "total.total"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -19,3 +19,9 @@ relationship 392436b1-493b-1230-9ca4-d8c701c8b22e
 	fromColumn: 4-aktywni_edytorzy_monthly.month
 	toColumn: Dim_month.month
 
+relationship AutoDetected_f03b7e76-bb20-446d-9f3e-08bc80f2d3dc
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: top100_z_kategoriami.title
+	toColumn: kategorie.title
+

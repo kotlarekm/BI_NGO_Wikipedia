@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 587.96352583586622,
-    "z": 2,
+    "z": 2000,
     "height": 447.90273556231,
     "width": 873.92097264437689,
-    "tabOrder": 2
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "lineChart",
@@ -99,117 +99,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "79f8ec6d5b116eaa0d8c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "1-ogladalnosc_monthly"
-              }
-            },
-            "Property": "month"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ab8a10b2692738150dc9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "1-ogladalnosc_monthly"
-              }
-            },
-            "Property": "month"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "09c6f1d3503b94b77582",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "1-ogladalnosc_monthly"
-              }
-            },
-            "Property": "month"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "e9ea2a50131bb540c71a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "1-ogladalnosc_monthly"
-              }
-            },
-            "Property": "month"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ed3b6b5ec319e99ecb04",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "1-ogladalnosc_monthly"
-              }
-            },
-            "Property": "agent"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d468c9f0b05526eea2e5",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "1-ogladalnosc_monthly"
-                  }
-                },
-                "Property": "total.mobile-app"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7516ab6ee4aa6d922948",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "1-ogladalnosc_monthly"
-                  }
-                },
-                "Property": "total.mobile-web"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

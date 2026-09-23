@@ -187,25 +187,6 @@
         "howCreated": "User"
       },
       {
-        "name": "88cfc0d8080a369d3ca1",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "5-top_1000_artykulow_monthly"
-                  }
-                },
-                "Property": "views"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "8106f2ae5ec565a35414",
         "field": {
           "Column": {

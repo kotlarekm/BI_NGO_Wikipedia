@@ -45,8 +45,16 @@ table 1-ogladalnosc_monthly
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'total.all' = [total.desktop]+[total.mobile-app]+[total.mobile-web]
+		formatString: 0
+		lineageTag: 36d045fa-fd0f-4f18-a7bb-5e65e0017219
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 1-ogladalnosc_monthly = m
 		mode: import
+		queryGroup: Zapytania
 		source =
 				let
 				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\1-ogladalnosc_monthly.csv"), [Delimiter = ",", Columns = 5, QuoteStyle = QuoteStyle.None]),
@@ -56,4 +64,6 @@ table 1-ogladalnosc_monthly
 				  #"Zmieniono typ kolumny"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Nawigacja
 

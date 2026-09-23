@@ -4,10 +4,10 @@
   "position": {
     "x": 10,
     "y": 537,
-    "z": 2,
+    "z": 2000,
     "height": 527,
     "width": 1011,
-    "tabOrder": 2
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "lineChart",
@@ -61,39 +61,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "bd6bcf4e01b85a641678",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "4-aktywni_edytorzy_monthly"
-                  }
-                },
-                "Property": "total.total"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "799af9e8a00a14bcba06",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "4-aktywni_edytorzy_monthly"
-              }
-            },
-            "Property": "month"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "3f59d54a4ab4bbe01ada",
         "field": {

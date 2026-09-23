@@ -1,0 +1,11 @@
+{
+  "name": "Montserrat",
+  "textClasses": {
+    "label": {
+      "fontFace": "Montserrat"
+    },
+    "title": {
+      "fontFace": "Montserrat"
+    }
+  }
+}

@@ -21,6 +21,7 @@ table 3-nowe_rejestracje_monthly
 
 	partition 3-nowe_rejestracje_monthly = m
 		mode: import
+		queryGroup: Zapytania
 		source =
 				let
 				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\3-nowe_rejestracje_monthly.csv"), [Delimiter = ",", Columns = 2, QuoteStyle = QuoteStyle.None]),
