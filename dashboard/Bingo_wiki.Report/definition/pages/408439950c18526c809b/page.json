@@ -4,58 +4,5 @@
   "displayName": "Kategorie",
   "displayOption": "FitToPage",
   "height": 1080,
-  "width": 1920,
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "59f3fa6a050355b38a43",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "5-top_1000_artykulow_monthly"
-              }
-            },
-            "Property": "year"
-          }
-        },
-        "type": "Advanced",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "5",
-              "Entity": "5-top_1000_artykulow_monthly",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 2,
-                  "Left": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "5"
-                        }
-                      },
-                      "Property": "year"
-                    }
-                  },
-                  "Right": {
-                    "Literal": {
-                      "Value": "2018L"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      }
-    ]
-  }
+  "width": 1920
 }

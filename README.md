@@ -18,26 +18,7 @@ opisy: #404040 (wm-black-75)
 przypisy: #7F7F7F (wm-black-50)
 
 Kolor marki
-
 główny akcent: #0E65C0 (wm-blue)
-
-Wykresy słupkowe
-Domyślnie
-
-Wszystkie słupki:
-
-
-
-Wybrany słupek:
-
-wm-blue #0E65C0
-
-Przykład:
-
-Biografie → ciemnoniebieskie
-pozostałe kategorie → jasnoniebieskie
-
-Na slajdzie "Ludzie interesują się ludźmi" efekt będzie świetny.
 
 Tło:
 Zamiast czystej bieli:
@@ -50,8 +31,9 @@ wm-blue-light #C3D8EF - wszystkie słupki
 
 To do:
 
-- Numeracja źródeł w meodologii
+
 - Weryfikacja wyświetleń kategorii dla 200 lub 300 artykułów
+- Usuń plik analiza top.csv
 - Tytuły wykresów
 - Weryfikacja metodologii
 
@@ -80,6 +62,7 @@ Zrobione:
         - Weryfikacja tekstów
         - Weryfikacja kolorów
         - Wyrównywanie
+        - Numeracja źródeł w meodologii
 
 Anulowane:
 - Top 10 (?) edytowanych artykułów
