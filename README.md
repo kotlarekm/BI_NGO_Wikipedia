@@ -31,13 +31,10 @@ wm-blue-light #C3D8EF - wszystkie słupki
 
 To do:
 
-
-- Weryfikacja wyświetleń kategorii dla 200 lub 300 artykułów
-- Usuń plik analiza top.csv
 - Tytuły wykresów
 - Weryfikacja metodologii
-
 - Uporządkowanie modelów danych - czy zostawiać PowerBI?
+- Uporządkowanie repo
     
 Zrobione:
 - Przygotowanie danych
@@ -63,6 +60,8 @@ Zrobione:
         - Weryfikacja kolorów
         - Wyrównywanie
         - Numeracja źródeł w meodologii
+        - Weryfikacja wyświetleń kategorii dla 200 lub 300 artykułów
+        - Usuń plik analiza top.csv
 
 Anulowane:
 - Top 10 (?) edytowanych artykułów
