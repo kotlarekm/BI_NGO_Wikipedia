@@ -56,7 +56,7 @@ table 7-top_100_najczesciej_edytowanych_artykulow_monthly
 
 	partition 7-top_100_najczesciej_edytowanych_artykulow_monthly = m
 		mode: import
-		queryGroup: Zapytania
+		queryGroup: Top_artykułów
 		source =
 				let
 				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\7-top_100_najczesciej_edytowanych_artykulow_monthly.csv"), [Delimiter = ",", Columns = 6, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
@@ -64,4 +64,8 @@ table 7-top_100_najczesciej_edytowanych_artykulow_monthly
 				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie", {{"page_id", Int64.Type}, {"year", Int64.Type}, {"month", Int64.Type}, {"rank", Int64.Type}, {"title", type text}, {"edits", Int64.Type}}, "pl")
 				in
 				  #"Zmieniono typ kolumny"
+
+	annotation PBI_NavigationStepName = Nawigacja
+
+	annotation PBI_ResultType = Table
 

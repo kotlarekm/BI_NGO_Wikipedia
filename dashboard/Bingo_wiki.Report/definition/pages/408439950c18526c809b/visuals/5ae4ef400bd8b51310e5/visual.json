@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "5ae4ef400bd8b51310e5",
   "position": {
-    "x": 141.66666666666669,
-    "y": 198.33333333333334,
-    "z": 2000,
-    "height": 763.33333333333337,
-    "width": 818.33333333333337,
-    "tabOrder": 2000
+    "x": 0,
+    "y": 49.6048632218845,
+    "z": 0,
+    "height": 509.17933130699089,
+    "width": 818.48024316109422,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "barChart",
@@ -116,42 +116,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "09cc4c000013e07bb60b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "top100_z_kategoriami"
-              }
-            },
-            "Property": "category"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "01edd28068a7a64bde60",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "top100_z_kategoriami"
-                  }
-                },
-                "Property": "views_total"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

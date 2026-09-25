@@ -54,14 +54,74 @@ table 5-top_1000_artykulow_monthly
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Średnia oglądalność'
+		dataType: double
+		lineageTag: bbe09477-4c34-428f-9432-4d7b0eab5747
+		summarizeBy: sum
+		sourceColumn: Średnia oglądalność
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Zmiana_od_sredniej_wzgledna
+		dataType: double
+		lineageTag: 8f657b08-168b-4bda-821f-7fa5c3342a38
+		summarizeBy: sum
+		sourceColumn: Zmiana_od_sredniej_wzgledna
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Zmiana_od_średniej_bezwzgledna
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c47877d-2a2e-42b3-b45a-ae91ae8c3761
+		summarizeBy: sum
+		sourceColumn: Zmiana_od_średniej_bezwzgledna
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Kategoria wzrostu popularności.kategoria'
+		dataType: string
+		lineageTag: 5e0fc131-3826-4257-ab03-c3cef2729eca
+		summarizeBy: none
+		sourceColumn: Kategoria wzrostu popularności.kategoria
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'year Hierarchia'
+		lineageTag: 6d96e84b-82d7-48bf-886b-d8f0534248dd
+
+		level year
+			lineageTag: 4d7b4a70-6e9c-42b1-98f6-09977b11495e
+			column: year
+
+		level month
+			lineageTag: 725269da-fe34-4131-a945-579076f53bc0
+			column: month
+
 	partition 5-top_1000_artykulow_monthly = m
 		mode: import
-		queryGroup: Zapytania
+		queryGroup: Top_artykułów
 		source =
 				let
 				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\5-top_1000_artykulow_monthly.csv"), [Delimiter = ",", Columns = 6, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
 				  #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(Źródło, [PromoteAllScalars = true]),
-				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie", {{"page_id", Int64.Type}, {"year", Int64.Type}, {"month", Int64.Type}, {"rank", Int64.Type}, {"title", type text}, {"views", Int64.Type}}, "pl")
+				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie", {{"page_id", Int64.Type}, {"year", Int64.Type}, {"month", Int64.Type}, {"rank", Int64.Type}, {"title", type text}, {"views", Int64.Type}}, "pl"),
+				    #"Scalone zapytania" = Table.NestedJoin(#"Zmieniono typ kolumny", {"title"}, #"5-top_1000_artykulow_monthly_avg", {"title"}, "5-top_1000_artykulow_monthly_avg", JoinKind.LeftOuter),
+				    #"Rozwinięty element 5-top_1000_artykulow_monthly_avg" = Table.ExpandTableColumn(#"Scalone zapytania", "5-top_1000_artykulow_monthly_avg", {"Średnia oglądalność"}, {"5-top_1000_artykulow_monthly_avg.Średnia oglądalność"}),
+				    #"Zmieniono nazwy kolumn" = Table.RenameColumns(#"Rozwinięty element 5-top_1000_artykulow_monthly_avg",{{"5-top_1000_artykulow_monthly_avg.Średnia oglądalność", "Średnia oglądalność"}}),
+				    #"Dodano kolumnę niestandardową" = Table.AddColumn(#"Zmieniono nazwy kolumn", "Zmiana_od_sredniej_wzgledna", each [views]/[Średnia oglądalność]),
+				    #"Dodano kolumnę niestandardową1" = Table.AddColumn(#"Dodano kolumnę niestandardową", "Zmiana_od_średniej_bezwzgledna", each [views]-[Średnia oglądalność]),
+				    #"Zmieniono typ" = Table.TransformColumnTypes(#"Dodano kolumnę niestandardową1",{{"Zmiana_od_sredniej_wzgledna", type number}, {"Zmiana_od_średniej_bezwzgledna", Int64.Type}}),
+				    #"Scalone zapytania1" = Table.NestedJoin(#"Zmieniono typ", {"title"}, #"Kategoria wzrostu popularności", {"Title"}, "Kategoria wzrostu popularności", JoinKind.LeftOuter),
+				    #"Rozwinięty element Kategoria wzrostu popularności" = Table.ExpandTableColumn(#"Scalone zapytania1", "Kategoria wzrostu popularności", {"kategoria"}, {"Kategoria wzrostu popularności.kategoria"})
 				in
-				  #"Zmieniono typ kolumny"
+				    #"Rozwinięty element Kategoria wzrostu popularności"
+
+	annotation PBI_NavigationStepName = Nawigacja
+
+	annotation PBI_ResultType = Table
 

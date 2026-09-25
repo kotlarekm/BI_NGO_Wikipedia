@@ -1,0 +1,37 @@
+table 5-top_1000_artykulow_monthly_avg
+	lineageTag: 9c038c91-6aa7-4113-938c-7ff95410d61f
+
+	column title
+		dataType: string
+		lineageTag: 24b3f357-1b0d-4180-8e24-ada6c4972d84
+		summarizeBy: none
+		sourceColumn: title
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Średnia oglądalność'
+		dataType: double
+		lineageTag: feb297e2-d868-44be-93ad-1a35c8213369
+		summarizeBy: sum
+		sourceColumn: Średnia oglądalność
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 5-top_1000_artykulow_monthly_avg = m
+		mode: import
+		queryGroup: Top_artykułów
+		source =
+				let
+				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\5-top_1000_artykulow_monthly.csv"), [Delimiter = ",", Columns = 6, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+				  #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(Źródło, [PromoteAllScalars = true]),
+				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie", {{"page_id", Int64.Type}, {"year", Int64.Type}, {"month", Int64.Type}, {"rank", Int64.Type}, {"title", type text}, {"views", Int64.Type}}, "pl"),
+				    #"Pogrupowano wiersze" = Table.Group(#"Zmieniono typ kolumny", {"title"}, {{"Średnia oglądalność", each List.Average([views]), type nullable number}})
+				in
+				  #"Pogrupowano wiersze"
+
+	annotation PBI_NavigationStepName = Nawigacja
+
+	annotation PBI_ResultType = Table
+

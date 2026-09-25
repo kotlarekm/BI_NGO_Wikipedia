@@ -219,3 +219,6 @@ __marimo__/
 
 #wyświetlenia raw
 /data/10-wyswietlenia_monthly_raw_data
+
+#pliki tymczasowe
+~$*

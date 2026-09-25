@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "1a0967a84722d08432ad",
+  "name": "191417e634c2609d0525",
   "position": {
-    "x": 134.28571428571431,
-    "y": 271.42857142857144,
-    "z": 1000,
-    "height": 690,
-    "width": 861.42857142857144,
-    "tabOrder": 1000
+    "x": 697.77249200154108,
+    "y": 197.59928977034792,
+    "z": 2000,
+    "height": 689.53918826110987,
+    "width": 638.08103988341509,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "barChart",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "7-top_100_najczesciej_edytowanych_artykulow_monthly"
+                      "Entity": "top100_z_kategoriami"
                     }
                   },
                   "Property": "title"
                 }
               },
-              "queryRef": "7-top_100_najczesciej_edytowanych_artykulow_monthly.title",
-              "nativeQueryRef": "title",
+              "queryRef": "top100_z_kategoriami.title",
+              "nativeQueryRef": "title1",
               "active": true
             }
           ]
@@ -41,17 +41,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "7-top_100_najczesciej_edytowanych_artykulow_monthly"
+                          "Entity": "top100_z_kategoriami"
                         }
                       },
-                      "Property": "edits"
+                      "Property": "views_total"
                     }
                   },
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(7-top_100_najczesciej_edytowanych_artykulow_monthly.edits)",
-              "nativeQueryRef": "Suma elementów edits"
+              "queryRef": "Sum(top100_z_kategoriami.views_total)",
+              "nativeQueryRef": "Suma elementów views_total"
             }
           ]
         }
@@ -65,10 +65,10 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "7-top_100_najczesciej_edytowanych_artykulow_monthly"
+                        "Entity": "top100_z_kategoriami"
                       }
                     },
-                    "Property": "edits"
+                    "Property": "views_total"
                   }
                 },
                 "Function": 0
@@ -80,20 +80,35 @@
         "isDefaultSort": true
       }
     },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Najpopularniejsze artykuły'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "ad0c30cc4b0511b05140",
+        "name": "69eecbfc7550b8a4d563",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "7-top_100_najczesciej_edytowanych_artykulow_monthly"
+                "Entity": "5-top_1000_artykulow_monthly"
               }
             },
-            "Property": "title"
+            "Property": "page_id"
           }
         },
         "type": "TopN",
@@ -101,8 +116,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "7",
-              "Entity": "7-top_100_najczesciej_edytowanych_artykulow_monthly",
+              "Name": "5",
+              "Entity": "5-top_1000_artykulow_monthly",
               "Type": 0
             },
             {
@@ -113,8 +128,8 @@
                     "Version": 2,
                     "From": [
                       {
-                        "Name": "7",
-                        "Entity": "7-top_100_najczesciej_edytowanych_artykulow_monthly",
+                        "Name": "5",
+                        "Entity": "5-top_1000_artykulow_monthly",
                         "Type": 0
                       }
                     ],
@@ -123,10 +138,10 @@
                         "Column": {
                           "Expression": {
                             "SourceRef": {
-                              "Source": "7"
+                              "Source": "5"
                             }
                           },
-                          "Property": "title"
+                          "Property": "page_id"
                         },
                         "Name": "field"
                       }
@@ -140,10 +155,10 @@
                               "Column": {
                                 "Expression": {
                                   "SourceRef": {
-                                    "Source": "7"
+                                    "Source": "5"
                                   }
                                 },
-                                "Property": "edits"
+                                "Property": "views"
                               }
                             },
                             "Function": 0
@@ -167,10 +182,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "7"
+                            "Source": "5"
                           }
                         },
-                        "Property": "title"
+                        "Property": "page_id"
                       }
                     }
                   ],
@@ -183,34 +198,16 @@
               }
             }
           ]
-        }
-      },
-      {
-        "name": "c19d81c4d14350018487",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "7-top_100_najczesciej_edytowanych_artykulow_monthly"
-                  }
-                },
-                "Property": "edits"
-              }
-            },
-            "Function": 0
-          }
         },
-        "type": "Advanced"
+        "howCreated": "User"
       },
       {
-        "name": "a2a683b177ed030ccd05",
+        "name": "8359df89789a031e9ee3",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "7-top_100_najczesciej_edytowanych_artykulow_monthly"
+                "Entity": "5-top_1000_artykulow_monthly"
               }
             },
             "Property": "year"
@@ -221,8 +218,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "7",
-              "Entity": "7-top_100_najczesciej_edytowanych_artykulow_monthly",
+              "Name": "5",
+              "Entity": "5-top_1000_artykulow_monthly",
               "Type": 0
             }
           ],
@@ -235,7 +232,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Source": "7"
+                          "Source": "5"
                         }
                       },
                       "Property": "year"
@@ -243,9 +240,63 @@
                   },
                   "Right": {
                     "Literal": {
-                      "Value": "2016L"
+                      "Value": "2018L"
                     }
                   }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "2daf80b2c9c9aa862d06",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "top100_z_kategoriami"
+              }
+            },
+            "Property": "category"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "t",
+              "Entity": "top100_z_kategoriami",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "t"
+                          }
+                        },
+                        "Property": "category"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Biografie'"
+                        }
+                      }
+                    ]
+                  ]
                 }
               }
             }

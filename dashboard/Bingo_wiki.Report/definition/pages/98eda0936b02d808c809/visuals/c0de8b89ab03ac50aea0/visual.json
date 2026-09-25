@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "c0de8b89ab03ac50aea0",
   "position": {
-    "x": 98.333333333333343,
-    "y": 245,
+    "x": 34.99154089683244,
+    "y": 195.54096383524012,
     "z": 0,
-    "height": 690,
-    "width": 881.66666666666674,
+    "height": 689.53918826110987,
+    "width": 638.08103988341509,
     "tabOrder": 0
   },
   "visual": {
@@ -79,6 +79,21 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Najpopularniejsze artykuły'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },
@@ -257,25 +272,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "0a418f8dcb768bdae4de",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "5-top_1000_artykulow_monthly"
-                  }
-                },
-                "Property": "views"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       },
       {
         "name": "8359df89789a031e9ee3",

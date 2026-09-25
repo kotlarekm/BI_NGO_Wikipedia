@@ -1,12 +1,12 @@
 table 1-ogladalnosc_monthly
 	lineageTag: adbacffc-6cf6-4a69-bad4-d50bf764e58b
 
-	column month
+	column date
 		dataType: dateTime
 		formatString: General Date
 		lineageTag: 52eb77a1-d37a-49c9-92f0-31d88c5ccef1
 		summarizeBy: none
-		sourceColumn: month
+		sourceColumn: date
 
 		annotation SummarizationSetBy = Automatic
 
@@ -52,16 +52,28 @@ table 1-ogladalnosc_monthly
 
 		annotation SummarizationSetBy = Automatic
 
+	column month
+		dataType: int64
+		formatString: 0
+		lineageTag: d9930819-e3da-4177-82e3-94ff9319269c
+		summarizeBy: sum
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 1-ogladalnosc_monthly = m
 		mode: import
-		queryGroup: Zapytania
+		queryGroup: 'Wikipedia ogólne'
 		source =
 				let
 				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\1-ogladalnosc_monthly.csv"), [Delimiter = ",", Columns = 5, QuoteStyle = QuoteStyle.None]),
 				  #"Nagłówki o podwyższonym poziomie" = Table.PromoteHeaders(Źródło, [PromoteAllScalars = true]),
-				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie", {{"month", type datetime}, {"agent", type text}, {"total.mobile-app", Int64.Type}, {"total.desktop", Int64.Type}, {"total.mobile-web", Int64.Type}}, "pl")
+				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nagłówki o podwyższonym poziomie", {{"month", type datetime}, {"agent", type text}, {"total.mobile-app", Int64.Type}, {"total.desktop", Int64.Type}, {"total.mobile-web", Int64.Type}}, "pl"),
+				    #"Zmieniono nazwy kolumn" = Table.RenameColumns(#"Zmieniono typ kolumny",{{"month", "date"}}),
+				    #"Dodano kolumnę niestandardową" = Table.AddColumn(#"Zmieniono nazwy kolumn", "month", each Date.Month([date])),
+				    #"Zmieniono typ" = Table.TransformColumnTypes(#"Dodano kolumnę niestandardową",{{"month", Int64.Type}})
 				in
-				  #"Zmieniono typ kolumny"
+				    #"Zmieniono typ"
 
 	annotation PBI_ResultType = Table
 

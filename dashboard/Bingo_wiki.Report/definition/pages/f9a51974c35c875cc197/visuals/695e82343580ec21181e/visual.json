@@ -1,0 +1,418 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "695e82343580ec21181e",
+  "position": {
+    "x": 803.89057750759878,
+    "y": 33.556231003039514,
+    "z": 1000,
+    "height": 814.10334346504555,
+    "width": 1101.5197568389058,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "5-top_1000_artykulow_monthly"
+                    }
+                  },
+                  "Property": "title"
+                }
+              },
+              "queryRef": "5-top_1000_artykulow_monthly.title",
+              "nativeQueryRef": "title"
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "5-top_1000_artykulow_monthly"
+                        }
+                      },
+                      "Hierarchy": "year Hierarchia"
+                    }
+                  },
+                  "Level": "year"
+                }
+              },
+              "queryRef": "5-top_1000_artykulow_monthly.year Hierarchia.year",
+              "nativeQueryRef": "year Hierarchia year"
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "5-top_1000_artykulow_monthly"
+                        }
+                      },
+                      "Hierarchy": "year Hierarchia"
+                    }
+                  },
+                  "Level": "month"
+                }
+              },
+              "queryRef": "5-top_1000_artykulow_monthly.year Hierarchia.month",
+              "nativeQueryRef": "year Hierarchia month"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "5-top_1000_artykulow_monthly"
+                        }
+                      },
+                      "Property": "Zmiana_od_sredniej_wzgledna"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(5-top_1000_artykulow_monthly.Zmiana_od_sredniej_wzgledna)",
+              "nativeQueryRef": "Zmiana względna",
+              "displayName": "Zmiana względna",
+              "format": "0.00%;-0.00%;0.00%"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "5-top_1000_artykulow_monthly"
+                        }
+                      },
+                      "Property": "Zmiana_od_średniej_bezwzgledna"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(5-top_1000_artykulow_monthly.Zmiana_od_średniej_bezwzgledna)",
+              "nativeQueryRef": "Zmiana bezwzględna",
+              "displayName": "Zmiana bezwzględna"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "5-top_1000_artykulow_monthly"
+                    }
+                  },
+                  "Property": "Kategoria wzrostu popularności.kategoria"
+                }
+              },
+              "queryRef": "5-top_1000_artykulow_monthly.Kategoria wzrostu popularności.kategoria",
+              "nativeQueryRef": "Kategoria wzrostu popularności.kategoria"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "5-top_1000_artykulow_monthly"
+                      }
+                    },
+                    "Property": "Zmiana_od_średniej_bezwzgledna"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnFormatting": [
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "5-top_1000_artykulow_monthly.title"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "accessibility": [
+        {
+          "properties": {
+            "rowWithReferenceText": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f68ab6d8e7e0a7945000",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "5-top_1000_artykulow_monthly"
+                  }
+                },
+                "Property": "Zmiana_od_sredniej_wzgledna"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "5",
+              "Entity": "5-top_1000_artykulow_monthly",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 1,
+                  "Left": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "5"
+                            }
+                          },
+                          "Property": "Zmiana_od_sredniej_wzgledna"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "2L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "8c31fb3fc3e1437a2e40",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "5-top_1000_artykulow_monthly"
+                  }
+                },
+                "Property": "Zmiana_od_średniej_bezwzgledna"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "5",
+              "Entity": "5-top_1000_artykulow_monthly",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 1,
+                  "Left": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "5"
+                            }
+                          },
+                          "Property": "Zmiana_od_średniej_bezwzgledna"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "100000L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "76b0f9370e02e583ee30",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "5-top_1000_artykulow_monthly"
+              }
+            },
+            "Property": "title"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bc42086ec08ea4ec0370",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "5-top_1000_artykulow_monthly"
+                  }
+                },
+                "Hierarchy": "year Hierarchia"
+              }
+            },
+            "Level": "year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "61329c77845335e6c586",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "5-top_1000_artykulow_monthly"
+                  }
+                },
+                "Hierarchy": "year Hierarchia"
+              }
+            },
+            "Level": "month"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "50011f56deb05152db06",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "5-top_1000_artykulow_monthly"
+              }
+            },
+            "Property": "Kategoria wzrostu popularności.kategoria"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

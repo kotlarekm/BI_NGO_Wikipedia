@@ -21,7 +21,7 @@ table 2-nowe_artykuly_monthly
 
 	partition 2-nowe_artykuly_monthly = m
 		mode: import
-		queryGroup: Zapytania
+		queryGroup: 'Wikipedia ogólne'
 		source =
 				let
 				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\2-nowe_artykuly_monthly.csv"), [Delimiter = ",", Columns = 2, QuoteStyle = QuoteStyle.None]),

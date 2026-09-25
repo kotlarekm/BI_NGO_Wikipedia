@@ -403,7 +403,7 @@ Pozycji z różnych miesięcy nie należy traktować jako jednego ciągłego ran
 | Plik | Źródło | Licencja danych |
 |---|---|---|
 | 1-4 | Wikistats 2 / Wikimedia Analytics API (AQS) | CC0 1.0 |
-| 5, 6 | Zrzuty `pageview_complete` (dumps.wikimedia.org), uzupełnione o metadane stron polskojęzycznej Wikipedii | CC0 1.0 |
+| 5, 6 | wi
 | 7 | Statystyki edycji polskojęzycznej Wikipedii (Wikimedia Analytics) | CC0 1.0 |
 | 8 | Wikistats 2 / Wikimedia Analytics API (AQS) | CC0 1.0 |
 | 9 | Wikidata (zapytanie SPARQL) oraz polskojęzyczna Wikipedia | CC0 1.0 (Wikidata), CC BY-SA 4.0 (Wikipedia) |

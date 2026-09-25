@@ -38,7 +38,7 @@ table top100_z_kategoriami
 
 	partition top100_z_kategoriami = m
 		mode: import
-		queryGroup: Zapytania
+		queryGroup: Top_artykułów
 		source =
 				let
 				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\5-top_1000_artykulow_monthly.csv"), [Delimiter = ",", Columns = 6, Encoding = 65001, QuoteStyle = QuoteStyle.None]),
@@ -56,5 +56,5 @@ table top100_z_kategoriami
 
 	annotation PBI_NavigationStepName = Nawigacja
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
 

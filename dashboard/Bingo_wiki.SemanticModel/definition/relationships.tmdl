@@ -4,7 +4,7 @@ relationship bd096616-1f08-4b57-be65-ad37f7bda14f
 	toColumn: LocalDateTable_a9271a7e-2cb6-4f15-9cec-e27c487be376.Date
 
 relationship b6a4a926-37d6-0a78-0632-7ddc06cdd186
-	fromColumn: 1-ogladalnosc_monthly.month
+	fromColumn: 1-ogladalnosc_monthly.date
 	toColumn: Dim_month.month
 
 relationship 2f9f1c14-7b51-1656-5727-8fe3b780ad69
@@ -20,8 +20,10 @@ relationship 392436b1-493b-1230-9ca4-d8c701c8b22e
 	toColumn: Dim_month.month
 
 relationship AutoDetected_f03b7e76-bb20-446d-9f3e-08bc80f2d3dc
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
 	fromColumn: top100_z_kategoriami.title
+	toColumn: kategorie.title
+
+relationship 301cff4b-a961-1ec0-3fa0-fbef85c3e92e
+	fromColumn: 5-top_1000_artykulow_monthly.title
 	toColumn: kategorie.title
 

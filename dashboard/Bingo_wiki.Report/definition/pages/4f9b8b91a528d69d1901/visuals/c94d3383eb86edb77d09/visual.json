@@ -23,7 +23,7 @@
                       "Entity": "1-ogladalnosc_monthly"
                     }
                   },
-                  "Property": "month"
+                  "Property": "date"
                 }
               },
               "queryRef": "1-ogladalnosc_monthly.month.Odmiana.Hierarchia dat.Rok",

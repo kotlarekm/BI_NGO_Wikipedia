@@ -9,15 +9,19 @@ model Model
 
 queryGroup Parametry
 
-	annotation PBI_QueryGroupOrder = 1
+	annotation PBI_QueryGroupOrder = 2
 
-queryGroup Zapytania
+queryGroup 'Wikipedia ogólne'
 
 	annotation PBI_QueryGroupOrder = 0
 
+queryGroup Top_artykułów
+
+	annotation PBI_QueryGroupOrder = 1
+
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["1-ogladalnosc_monthly","2-nowe_artykuly_monthly","3-nowe_rejestracje_monthly","Dim_month","4-aktywni_edytorzy_monthly","5-top_1000_artykulow_monthly","7-top_100_najczesciej_edytowanych_artykulow_monthly","kategorie","top100_z_kategoriami","StartingYear"]
+annotation PBI_QueryOrder = ["1-ogladalnosc_monthly","2-nowe_artykuly_monthly","3-nowe_rejestracje_monthly","Dim_month","4-aktywni_edytorzy_monthly","5-top_1000_artykulow_monthly","5-top_1000_artykulow_monthly_avg","7-top_100_najczesciej_edytowanych_artykulow_monthly","kategorie","top100_z_kategoriami","StartingYear","Kategoria wzrostu popularności"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -33,6 +37,8 @@ ref table 7-top_100_najczesciej_edytowanych_artykulow_monthly
 ref table kategorie
 ref table Tab_measures
 ref table top100_z_kategoriami
+ref table 5-top_1000_artykulow_monthly_avg
+ref table 'Kategoria wzrostu popularności'
 
 ref cultureInfo pl-PL
 

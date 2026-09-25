@@ -1,0 +1,33 @@
+table 'Kategoria wzrostu popularności'
+	lineageTag: c8bebcdf-28b3-4a88-bb4c-2139e2f16742
+
+	column Title
+		dataType: string
+		lineageTag: 9ee652f6-86ea-4b0f-9180-0d6fdc61fa99
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column kategoria
+		dataType: string
+		lineageTag: 90aff64d-7017-4f80-b146-bbd969e4bc40
+		summarizeBy: none
+		sourceColumn: kategoria
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Kategoria wzrostu popularności' = m
+		mode: import
+		source =
+				let
+				  Źródło = Excel.Workbook(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\storytelling\Dane_do_ppt.xlsx"), null, true),
+				  #"Nawigacja 1" = Źródło{[Item = "Tabela6", Kind = "Table"]}[Data],
+				  #"Zmieniono typ kolumny" = Table.TransformColumnTypes(#"Nawigacja 1", {{"Title", type text}, {"kategoria", type text}}, "pl")
+				in
+				  #"Zmieniono typ kolumny"
+
+	annotation PBI_NavigationStepName = Nawigacja
+
+	annotation PBI_ResultType = Table
+

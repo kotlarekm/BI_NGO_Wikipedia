@@ -18,12 +18,16 @@ To do:
     - Suma Nowych użytkowników z ostatnich 25
     - Średnia aktywnych użytkowników  z ostatnich?
 - Top 10 (?) wyświeltanych artykułów
+    - mam staystyki na podstawie https://pageviews.wmcloud.org/ - "D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\pageviews-2016-08-2026-08.csv"
+    - Biblia w latach 2016-2017 ma ogromne skoki ze względu na zwiększony ruch botów i błędy w raportowaniu,
+    z tego względu decyduję się na ograniczenie analizy do ostatnich 8 lat?
+    - korelacja anomalii - z wydarzeniami
+    - Zrobienie metryki - procentowego i całkowitego odchylenia od średniej
 - Top 10 (?) edytowanych artykułów
 - Top kategorii
     - przygotowanie danych
     
     
-
 Zrobione:
 - Przygotowanie danych
     - najnowszy tytuł pod pageId, w otrzymanych danych każde page_id ma już aktualny tytuł

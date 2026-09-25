@@ -28,7 +28,7 @@ table kategorie
 
 	partition kategorie = m
 		mode: import
-		queryGroup: Zapytania
+		queryGroup: Top_artykułów
 		source =
 				let
 				  Źródło = Csv.Document(File.Contents("D:\AnalizaDanych\000_projekty\BI_NGO_Wikipedia\BI_NGO_Wikipedia\data\top100_cat.csv"), [Delimiter = ",", Columns = 3, Encoding = 65001, QuoteStyle = QuoteStyle.None]),

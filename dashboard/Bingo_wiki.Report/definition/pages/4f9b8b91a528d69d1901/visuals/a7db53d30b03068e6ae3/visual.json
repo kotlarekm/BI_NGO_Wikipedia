@@ -23,7 +23,7 @@
                       "Entity": "1-ogladalnosc_monthly"
                     }
                   },
-                  "Property": "month"
+                  "Property": "date"
                 }
               },
               "queryRef": "1-ogladalnosc_monthly.month.Odmiana.Hierarchia dat.Rok",
@@ -91,56 +91,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "4a6a724d89917a1424b3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "1-ogladalnosc_monthly"
-              }
-            },
-            "Property": "month"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "f7e72b43174488024ed8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "1-ogladalnosc_monthly"
-              }
-            },
-            "Property": "agent"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d53615f9de823036e48d",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "1-ogladalnosc_monthly"
-                  }
-                },
-                "Property": "total.desktop"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

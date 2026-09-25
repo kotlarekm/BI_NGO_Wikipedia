@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "e2285607243a008e2264",
   "position": {
-    "x": 1043.161094224924,
-    "y": 198.419452887538,
-    "z": 2001,
-    "height": 763.33333333333337,
-    "width": 818.33333333333337,
-    "tabOrder": 2001
+    "x": 1038.7841945288753,
+    "y": 32.097264437689972,
+    "z": 1000,
+    "height": 459.57446808510639,
+    "width": 818.48024316109422,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "pieChart",
@@ -96,42 +96,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "92ef59837760c11215db",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "kategorie"
-              }
-            },
-            "Property": "assigned_category"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "1981419452238ea15275",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "kategorie"
-                  }
-                },
-                "Property": "views"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
