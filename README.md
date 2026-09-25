@@ -10,9 +10,45 @@ https://meta.wikimedia.org/wiki/Brand/colours
 Typografia:
 https://meta.wikimedia.org/wiki/Brand/Typography
 
+Paleta:
+Tekst
+
+tytuły: #000000 (wm-black)
+opisy: #404040 (wm-black-75)
+przypisy: #7F7F7F (wm-black-50)
+
+Kolor marki
+
+główny akcent: #0E65C0 (wm-blue)
+
+Wykresy słupkowe
+Domyślnie
+
+Wszystkie słupki:
+
+wm-blue-light #C3D8EF
+
+Wybrany słupek:
+
+wm-blue #0E65C0
+
+Przykład:
+
+Biografie → ciemnoniebieskie
+pozostałe kategorie → jasnoniebieskie
+
+Na slajdzie "Ludzie interesują się ludźmi" efekt będzie świetny.
+
+Tło:
+Zamiast czystej bieli:
+wm-yellow-bright-light #F9F9F0
+
+tło: #FFFFFF
+tytuły: #000000
+tekst: #404040
+wykresy: Wikimedia Blue #0E65C0
 
 To do:
-
 
 - Weryfikacja kolorów
 - Wyrównywanie
