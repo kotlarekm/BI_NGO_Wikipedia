@@ -222,3 +222,6 @@ __marimo__/
 
 #pliki tymczasowe
 ~$*
+
+#plik pdf - używany wyłącznie pod kątem weryfikacji z LLM
+storytelling/Storytelling.pdf
