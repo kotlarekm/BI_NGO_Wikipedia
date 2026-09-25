@@ -26,7 +26,7 @@ Domyślnie
 
 Wszystkie słupki:
 
-wm-blue-light #C3D8EF
+
 
 Wybrany słupek:
 
@@ -41,17 +41,15 @@ Na slajdzie "Ludzie interesują się ludźmi" efekt będzie świetny.
 
 Tło:
 Zamiast czystej bieli:
-wm-yellow-bright-light #F9F9F0
 
-tło: #FFFFFF
+tło: wm-yellow-bright-light #F9F9F0
 tytuły: #000000
 tekst: #404040
-wykresy: Wikimedia Blue #0E65C0
+wykresy: Wikimedia Blue #0E65C0 - wybrane słupki
+wm-blue-light #C3D8EF - wszystkie słupki
 
 To do:
 
-- Weryfikacja kolorów
-- Wyrównywanie
 - Numeracja źródeł w meodologii
 - Weryfikacja wyświetleń kategorii dla 200 lub 300 artykułów
 - Tytuły wykresów
@@ -80,6 +78,8 @@ Zrobione:
     - Storytelling
         - Slajd z podsumowaniem
         - Weryfikacja tekstów
+        - Weryfikacja kolorów
+        - Wyrównywanie
 
 Anulowane:
 - Top 10 (?) edytowanych artykułów
