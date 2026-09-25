@@ -13,9 +13,12 @@ https://meta.wikimedia.org/wiki/Brand/Typography
 
 To do:
 
-- Weryfikacja tekstów
+
 - Weryfikacja kolorów
 - Wyrównywanie
+- Numeracja źródeł w meodologii
+- Weryfikacja wyświetleń kategorii dla 200 lub 300 artykułów
+- Tytuły wykresów
 - Weryfikacja metodologii
 
 - Uporządkowanie modelów danych - czy zostawiać PowerBI?
@@ -40,6 +43,7 @@ Zrobione:
 
     - Storytelling
         - Slajd z podsumowaniem
+        - Weryfikacja tekstów
 
 Anulowane:
 - Top 10 (?) edytowanych artykułów
