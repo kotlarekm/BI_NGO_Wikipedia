@@ -37,6 +37,15 @@ To do:
 - Uporządkowanie repo
     
 Zrobione:
+- Stylistyka prezentacji
+    - podział 1/3 + 2/3
+    - Zmniejszenie tytułów do weryfikacji
+    - Nie wyśrodkowuj tesktów tylko do lewej
+    - Marginesy - wyrównanie
+    - Post czego szukamy - która opcja
+    - Nieco obłe kształty na zdjęciach?
+    - Gdzie logo Wikipedii?
+
 - Przygotowanie danych
     - najnowszy tytuł pod pageId, w otrzymanych danych każde page_id ma już aktualny tytuł
     - uzupełnienie brakujących page_id - puste page_id pochodzą ze stron już nieistniejących (np. przeniesionych gdzieś indziej, jedyną istotną stroną jest "xss")
