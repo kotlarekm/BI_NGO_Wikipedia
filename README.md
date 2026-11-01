@@ -31,6 +31,11 @@ wm-blue-light #C3D8EF - wszystkie słupki
 
 To do:
 
+- Feedback KJD:
+
+
+    Można używać chat gpt - codex
+
 - Tytuły wykresów
 - Weryfikacja metodologii
 - Uporządkowanie modelów danych - czy zostawiać PowerBI?
@@ -46,6 +51,16 @@ Zrobione:
     - Nieco obłe kształty na zdjęciach?
     - Gdzie logo Wikipedii?
 
+-   KJD Feedback
+    Opis kategorii wikipedia: artykuł może wpaść do więcej,
+	Można dać opis na końcu - dać przypis
+	Można dać top 500 np.. I procenty zamiast wartości 
+	Poszerzyć słupki 
+    Dać w wykresie słupkowym linie siatki 
+	Pierwszy turniej Igi Świątek opisać
+	Grubsze pogrubienie
+	Źródło - nie w tytule
+    
 - Przygotowanie danych
     - najnowszy tytuł pod pageId, w otrzymanych danych każde page_id ma już aktualny tytuł
     - uzupełnienie brakujących page_id - puste page_id pochodzą ze stron już nieistniejących (np. przeniesionych gdzieś indziej, jedyną istotną stroną jest "xss")
